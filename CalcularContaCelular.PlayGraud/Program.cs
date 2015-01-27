@@ -19,13 +19,19 @@ namespace CalcularContaCelular.PlayGraud
 
             var consumo = new Consumo("Arizio", 1, 2 , 3);
 
-            var plano = Plano("Smart", 0.10m, 0.35m, 0.75m, 30m);
+            var plano = new Plano("Smart", 0.10m, 0.35m, 0.75m, 30m);
 
-            var promocao = new Promocao("Fale 30", 0.05m, 0.25m, 0.60m);
+            var promocao = new DescontoSobreConsumo("Fale 30", 0.05m, 0.25m, 0.60m);
 
-            plano.AdicionarPromocao(promocao);
+            //plano.AdicionarPromocao(promocao);
 
-            var conta = plano.
+            var conta = plano.CalcularConta(consumo);
+
+
+
+
+
+
 
             //decimal total = 0;
 

@@ -14,7 +14,7 @@ namespace CalcularContaCelular
         public decimal ValorParaInterurbano { get; set; }
         public decimal ValorAssinatura { get; set; }
 
-        public Plano(string usuario, decimal valorParaFixo, decimal valorParaCelular, 
+        public Plano(string usuario, decimal valorParaFixo, decimal valorParaCelular,
                         decimal valorParaInterurbano, decimal valorAssinatura)
         {
             Usuario = usuario;
@@ -25,13 +25,26 @@ namespace CalcularContaCelular
         }
 
 
-
         public Conta CalcularConta(Consumo consumo)
         {
             var conta = new Conta();
 
-            var valorFixo = this.Calc(ValorParaFixo, consumo.MinutosParaFixo);
+            var servicos = new List<Servico>();
 
+            if (this.Promocao == null)
+            {
+                servicos.Add(new Servico("Assinatura", 1, this.ValorAssinatura));
+                servicos.Add(new Servico("Fixo", consumo.MinutosParaFixo, this.ValorParaFixo));
+                servicos.Add(new Servico("Celular", consumo.MinutosParaCelular, this.ValorParaCelular));
+                servicos.Add(new Servico("Interurbano", consumo.MinutosParaInterurbano, this.ValorParaInterurbano));
+            }
+            else
+            {
+                var fixoPromocional = consumo.MinutosParaFixo > 30 ? : 0; 
+
+            }
+
+            conta.Total = servicos.Sum(s => s.ObterTotal());
 
             return conta;
         }

@@ -12,6 +12,8 @@ namespace CalcularContaCelular
         //Propriedades
         public int QuantidadeMinutos { get; set; }
         public int TipoConta { get; set; }
+        public decimal Total { get; set; }
+
 
         public Conta()
         {

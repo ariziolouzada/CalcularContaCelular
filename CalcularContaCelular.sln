@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcularContaCelular.PlayGr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcularContaCelular", "CalcularContaCelular\CalcularContaCelular.csproj", "{03B47F7E-FDAB-4575-B2B3-0704FABE301F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcularContaCelular.Tests", "CalcularContaCelular.Tests\CalcularContaCelular.Tests.csproj", "{8A620DC4-956A-4884-8BD4-1A30464A2B4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{03B47F7E-FDAB-4575-B2B3-0704FABE301F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03B47F7E-FDAB-4575-B2B3-0704FABE301F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03B47F7E-FDAB-4575-B2B3-0704FABE301F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A620DC4-956A-4884-8BD4-1A30464A2B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A620DC4-956A-4884-8BD4-1A30464A2B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A620DC4-956A-4884-8BD4-1A30464A2B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A620DC4-956A-4884-8BD4-1A30464A2B4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
